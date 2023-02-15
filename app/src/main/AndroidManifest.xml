@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.com.uptimum">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="app.com.uptimum.Main.SwipeTouch.FriendRequetsActivity"></activity>
+        <activity android:name="app.com.uptimum.Main.SearchActivity" />
+        <activity android:name="app.com.uptimum.Main.other.StatusDetail.StatusDetailActivity" />
+        <activity android:name="app.com.uptimum.Main.other.Stories.ShowAllStoriesActivity" />
+        <activity android:name="app.com.uptimum.Main.other.Stories.UploadStoriesActivity" />
+        <activity android:name="app.com.uptimum.Main.other.Personal.Personal_informationActivity" />
+        <activity android:name="app.com.uptimum.Main.other.Personal.ShowImagePersonalActivity" />
+        <activity android:name=".Main.other.CommentActivity" />
+        <activity android:name="app.com.uptimum.Main.other.Stories.ViewpagerStoriesActivity" />
+        <activity android:name="app.com.uptimum.Main.PersonalActivity" />
+        <activity
+            android:name="app.com.uptimum.upload.UploadPostsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="app.com.uptimum.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="app.com.uptimum.login.RegisterActivity" />
+        <activity android:name="app.com.uptimum.login.LoginActivity" />
+        <activity android:name="app.com.uptimum.Main.MainActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="app.com.uptimum.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
